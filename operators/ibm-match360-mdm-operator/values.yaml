@@ -1,10 +1,10 @@
-global: {}
-
-match360mdmoper:
-  subscription:
-    channel: v1.1
-    installPlanApproval: Automatic
-    name: ibm-mdm
-    source: ibm-operator-catalog
-    sourceNamespace: openshift-marketplace
-    startingCSV: ibm-mdm.v1.1.188
+subscriptions:
+  match360mdmoper:
+    name: ibm-match360-mdm-operator
+    subscription:
+      channel: v1.1
+      installPlanApproval: Automatic
+      name: ibm-mdm
+      source: ibm-operator-catalog
+      sourceNamespace: openshift-marketplace
+      startingCSV: ibm-mdm.v1.1.188

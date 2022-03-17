@@ -3,10 +3,7 @@ kind: Subscription
 metadata:
   labels:
     operators.coreos.com/ibm-mdm.openshift-operators: ''
-      manager: catalog
-      operation: Update
-  name: {{ .Values.match360mdmoper.subscription.name }}
+  name: {{ .Values.subscriptions.match360mdmoper.name }}
   namespace: openshift-operators
 spec:
-  {{- toYaml .Values.match360mbmoper.subscription | nindent 2 }}
-
+  {{- toYaml .Values.subscriptions.match360mdmoper.subscription | nindent 2 }}
