@@ -5,12 +5,8 @@ metadata:
     operators.coreos.com/ibm-mdm.openshift-operators: ''
       manager: catalog
       operation: Update
-  name: ibm-mdm
+  name: {{ .Values.match360mdmoper.subscription.name }}
   namespace: openshift-operators
 spec:
-  channel: v1.1
-  installPlanApproval: Automatic
-  name: ibm-mdm
-  source: ibm-operator-catalog
-  sourceNamespace: openshift-marketplace
-  startingCSV: ibm-mdm.v1.1.188
+  {{- toYaml .Values.match360mbmoper.subscription | nindent 2 }}
+
