@@ -1,0 +1,12 @@
+global: {}
+
+ibm-match360-mdm-operator:
+  subscriptions:
+    ibmcpdplatform:
+      name: ibm-match360-operator-subscription
+      subscription:
+        channel: stable-v1
+        installPlanApproval: Automatic
+        name: cpd-platform-operator
+        source: ibm-operator-catalog
+        sourceNamespace: openshift-marketplace

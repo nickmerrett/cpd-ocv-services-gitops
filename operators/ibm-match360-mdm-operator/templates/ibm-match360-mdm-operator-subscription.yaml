@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  labels:
+    operators.coreos.com/ibm-mdm.openshift-operators: ''
+      manager: catalog
+      operation: Update
+  name: ibm-mdm
+  namespace: openshift-operators
+spec:
+  channel: v1.1
+  installPlanApproval: Automatic
+  name: ibm-mdm
+  source: ibm-operator-catalog
+  sourceNamespace: openshift-marketplace
+  startingCSV: ibm-mdm.v1.1.188
