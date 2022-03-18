@@ -4,6 +4,6 @@ metadata:
   labels:
     operators.coreos.com/ibm-mdm.openshift-operators: ''
   name: {{ .Values.subscriptions.match360mdmoper.name }}
-  namespace: openshift-operators
+  namespace: ibm-common-services 
 spec:
   {{- toYaml .Values.subscriptions.match360mdmoper.subscription | nindent 2 }}
