@@ -1,0 +1,17 @@
+apiVersion: mdm.cpd.ibm.com/v1
+kind: MasterDataManagement
+metadata:
+  name: mdm-cr    
+  namespace: tools 
+spec:
+  license:
+    accept: true
+    license: Enterprise
+  version: 1.1.188
+  persistence:
+    storage_class: ocs-storagecluster-cephfs
+    storage_vendor: ocs
+  shared_persistence:
+    storage_class: ocs-storagecluster-cephfs
+  common_core_services:
+    enabled: true
