@@ -6,6 +6,5 @@ spec:
   license:
     accept: true
     license: Enterprise
-  storageClass: ocs-storagecluster-ceph-rbd
+  storageClass: ocs-storagecluster-ceph
   zenCoreMetadbStorageClass: ocs-storagecluster-ceph-rbd 
-  version: "4.0.1"
