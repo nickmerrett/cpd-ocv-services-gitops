@@ -3,9 +3,9 @@ kind: Ibmcpd
 metadata:
   name: ibmcpd-cr
   namespace: tools
+  csTools: tools
 spec:
   license:
     accept: true
     license: Enterprise
-  storageClass: ocs-storagecluster-cephfs
-  zenCoreMetadbStorageClass: ocs-storagecluster-ceph-rbd 
+  storageVendor: ocs
