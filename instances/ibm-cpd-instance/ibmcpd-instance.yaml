@@ -2,6 +2,7 @@ apiVersion: cpd.ibm.com/v1
 kind: Ibmcpd
 metadata:
   name: ibmcpd-cr
+  namespace: tools
 spec:
   license:
     accept: true
