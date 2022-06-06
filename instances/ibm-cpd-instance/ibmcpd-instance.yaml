@@ -9,3 +9,5 @@ spec:
     accept: true
     license: Enterprise
   storageVendor: ocs
+  storageClass: ocs-storagecluster-cephfs
+  zenCoreMetadbStorageClass: ocs-storagecluster-ceph-rbd
