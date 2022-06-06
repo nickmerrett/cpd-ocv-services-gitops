@@ -1,0 +1,34 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ibm-cpd-dv-operator
+  annotations:
+    argocd.argoproj.io/sync-wave: "270"
+  labels:
+    gitops.tier.group: ibm-cloudpak
+    gitops.tier.layer: services
+    gitops.tier.source: git
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: ibm-common-services 
+    server: 'https://kubernetes.default.svc'
+  project: services
+  source:
+    path: operators/ibm-dv-operator
+    helm:
+      values: |
+        subscriptions:
+          ibmdvoperator:
+            name: ibm-dv-operator
+            subscription:
+              channel: v1.7
+              installPlanApproval: Automatic
+              name: ibm-dv-operator
+              source: ibm-operator-catalog
+              sourceNamespace: openshift-marketplace
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
