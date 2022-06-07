@@ -3,7 +3,6 @@ kind: Ibmcpd
 metadata:
   name: ibmcpd-cr
   namespace: tools
-  csTools: tools
 spec:
   license:
     accept: true
